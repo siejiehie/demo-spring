@@ -1,4 +1,4 @@
-package io.toya.chap1.javaconfig;
+package io.toya.ch01.javaconfig;
 
 /**
  * Created by Sai on 2017/3/7.

@@ -1,4 +1,4 @@
-package io.toya.chap1.di;
+package io.toya.ch01.javaconfig;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -8,9 +8,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DiConfig.class);
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(JavaConfig.class);
         UseFunctionService useFunctionService = ctx.getBean(UseFunctionService.class);
-        System.out.println(useFunctionService.sayHello("DI"));
+        System.out.println(useFunctionService.sayHello("Higgs Atom"));
         ctx.close();
     }
 

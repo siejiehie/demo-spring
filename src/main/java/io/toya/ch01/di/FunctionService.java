@@ -1,4 +1,4 @@
-package io.toya.chap1.di;
+package io.toya.ch01.di;
 
 import org.springframework.stereotype.Service;
 
