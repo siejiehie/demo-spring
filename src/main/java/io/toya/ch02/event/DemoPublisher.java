@@ -1,7 +1,10 @@
 package io.toya.ch02.event;
 
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +15,10 @@ import org.springframework.stereotype.Service;
 public class DemoPublisher {
 
     @Autowired
-    public ApplicationContext applicationContext;
+    private ApplicationEventPublisher applicationEventPublisher;
 
     public void publish(String msg) {
-        applicationContext.publishEvent(new DemoEvent(this, msg));
+        applicationEventPublisher.publishEvent(new DemoEvent(this, msg));
     }
 
 }
